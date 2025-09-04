@@ -32,11 +32,11 @@ This repository serves as a curated collection of offensive security resources, 
 - Lateral movement strategies
 - Persistence mechanisms
 
-### [AI/ML in Cybersecurity](ai-ml-hacking.md)
-- AI-powered security tools
-- Machine learning for threat detection
-- Adversarial machine learning
-- AI security research resources
+### [AI/ML Hacking](ai-ml-hacking.md)
+- Prompt injection and jailbreaking techniques
+- Adversarial machine learning attacks
+- AI system security testing methods
+- Practical AI hacking labs and examples
 
 ### [Tools & Frameworks](tools-frameworks.md)
 - Popular penetration testing frameworks
@@ -79,7 +79,7 @@ Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pul
 - [Enumeration & Reconnaissance](enumeration-recon.md)
 - [Web Application Security](webapp-security.md)
 - [Exploitation & Post-Exploitation](exploitation.md)
-- [AI/ML in Cybersecurity](ai-ml-hacking.md)
+- [AI/ML Hacking](ai-ml-hacking.md)
 - [Tools & Frameworks](tools-frameworks.md)
 - [OSINT Resources](OSINT%20Resources.md)
 
