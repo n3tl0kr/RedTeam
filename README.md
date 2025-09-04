@@ -1,4 +1,4 @@
-# 🔴 RedTeam
+# RedTeam
 
 > **Offensive Security Resources & Tools** - A comprehensive collection of red teaming methodologies, tools, and resources for security professionals and researchers.
 
@@ -6,51 +6,45 @@
 [![GitHub stars](https://img.shields.io/github/stars/n3tl0kr/RedTeam?style=social)](https://github.com/n3tl0kr/RedTeam)
 [![GitHub forks](https://img.shields.io/github/forks/n3tl0kr/RedTeam?style=social)](https://github.com/n3tl0kr/RedTeam)
 
----
-
-## 🎯 Overview
+## Overview
 
 This repository serves as a curated collection of offensive security resources, tools, and methodologies for red teaming operations. Whether you're a seasoned security professional or just starting your journey in offensive security, you'll find valuable resources here.
 
-**⚠️ Disclaimer**: This repository is for educational and authorized security testing purposes only. Always ensure you have proper authorization before testing any systems or networks.
+**Disclaimer**: This repository is for educational and authorized security testing purposes only. Always ensure you have proper authorization before testing any systems or networks.
 
----
+## Resource Categories
 
-## 📚 Resource Categories
-
-### 🔍 [Enumeration & Reconnaissance](enumeration-recon.md)
+### [Enumeration & Reconnaissance](enumeration-recon.md)
 - Network enumeration techniques
 - Service discovery tools
 - Active and passive reconnaissance methods
 - OSINT (Open Source Intelligence) resources
 
-### 🌐 [Web Application Security](webapp-security.md)
+### [Web Application Security](webapp-security.md)
 - Web vulnerability assessment tools
 - OWASP Top 10 resources
 - Web application penetration testing methodologies
 - API security testing resources
 
-### 💥 [Exploitation & Post-Exploitation](exploitation.md)
+### [Exploitation & Post-Exploitation](exploitation.md)
 - Exploit development resources
 - Privilege escalation techniques
 - Lateral movement strategies
 - Persistence mechanisms
 
-### 🤖 [AI/ML in Cybersecurity](ai-ml-hacking.md)
+### [AI/ML in Cybersecurity](ai-ml-hacking.md)
 - AI-powered security tools
 - Machine learning for threat detection
 - Adversarial machine learning
 - AI security research resources
 
-### 🛠️ [Tools & Frameworks](tools-frameworks.md)
+### [Tools & Frameworks](tools-frameworks.md)
 - Popular penetration testing frameworks
 - Custom tools and scripts
 - Automation and orchestration tools
 - Reporting and documentation tools
 
----
-
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone the repository**
    ```bash
@@ -68,9 +62,7 @@ This repository serves as a curated collection of offensive security resources, 
    - Have a tool or script? Share it!
    - See an error? Fix it!
 
----
-
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the security community! Here's how you can help:
 
@@ -82,9 +74,7 @@ We welcome contributions from the security community! Here's how you can help:
 
 Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
 
----
-
-## 📖 Documentation
+## Documentation
 
 - [Enumeration & Reconnaissance](enumeration-recon.md)
 - [Web Application Security](webapp-security.md)
@@ -93,28 +83,20 @@ Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pul
 - [Tools & Frameworks](tools-frameworks.md)
 - [OSINT Resources](OSINT%20Resources.md)
 
----
-
-## ⚖️ License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - The cybersecurity community for sharing knowledge and tools
 - Open source projects that make security research possible
 - Researchers and professionals who contribute to offensive security
 
----
-
-## 📞 Contact
+## Contact
 
 - **GitHub**: [@n3tl0kr](https://github.com/n3tl0kr)
 - **Repository**: [RedTeam](https://github.com/n3tl0kr/RedTeam)
-
----
 
 <div align="center">
   <sub>Built with ❤️ for the security community</sub>

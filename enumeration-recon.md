@@ -1,12 +1,10 @@
-# 🔍 Reconnaissance Cheatsheet
+# Reconnaissance Cheatsheet
 
 > **Practical Network Discovery, Service Enumeration, and Intelligence Gathering** - Quick reference for active and passive reconnaissance operations.
 
----
+## Quick Start Commands
 
-## 🎯 Quick Start Commands
-
-### **Basic Network Discovery**
+### Basic Network Discovery
 ```bash
 # Quick network scan
 nmap -sn 192.168.1.0/24
@@ -21,7 +19,7 @@ nmap -sV -sC 192.168.1.1
 nmap -A -T4 192.168.1.1
 ```
 
-### **Subdomain Enumeration**
+### Subdomain Enumeration
 ```bash
 # Using subfinder
 subfinder -d example.com -o subdomains.txt
@@ -36,11 +34,9 @@ gobuster dns -d example.com -w /usr/share/wordlists/SecLists/Discovery/DNS/subdo
 assetfinder example.com > subdomains.txt
 ```
 
----
+## Passive Reconnaissance (OSINT)
 
-## 🌐 Passive Reconnaissance (OSINT)
-
-### **Domain Intelligence**
+### Domain Intelligence
 ```bash
 # WHOIS lookup
 whois example.com
@@ -57,7 +53,7 @@ dig -x 8.8.8.8
 dig @ns1.example.com example.com AXFR
 ```
 
-### **Email & Social Media**
+### Email & Social Media
 ```bash
 # Email format discovery
 theHarvester -d example.com -b google
@@ -69,7 +65,7 @@ maigret username
 social-analyzer --username username --websites
 ```
 
-### **Company Research**
+### Company Research
 ```bash
 # Company information
 # Use: LinkedIn, Crunchbase, OpenCorporates
@@ -77,13 +73,11 @@ social-analyzer --username username --websites
 # Research funding, acquisitions, partnerships
 ```
 
----
+## Active Reconnaissance
 
-## 🚀 Active Reconnaissance
+### Network Scanning
 
-### **Network Scanning**
-
-#### **Nmap Commands**
+#### Nmap Commands
 ```bash
 # Host discovery
 nmap -sn 192.168.1.0/24                    # Ping scan
@@ -102,7 +96,7 @@ nmap -sC 192.168.1.1                      # Default scripts
 nmap --script=vuln 192.168.1.1            # Vulnerability scripts
 ```
 
-#### **Masscan (Fast Scanning)**
+#### Masscan (Fast Scanning)
 ```bash
 # Fast port scan
 masscan 192.168.1.0/24 -p 80,443,8080
@@ -114,9 +108,9 @@ masscan 192.168.1.0/24 -p 0-65535
 masscan 192.168.1.0/24 -p 80 --rate 1000
 ```
 
-### **Service Enumeration**
+### Service Enumeration
 
-#### **Web Services**
+#### Web Services
 ```bash
 # Directory enumeration
 gobuster dir -u http://example.com -w /usr/share/wordlists/dirb/common.txt
@@ -131,7 +125,7 @@ whatweb example.com
 wappalyzer example.com
 ```
 
-#### **SMB Enumeration**
+#### SMB Enumeration
 ```bash
 # SMB enumeration
 enum4linux 192.168.1.1
@@ -143,7 +137,7 @@ rpcclient -U "" -N 192.168.1.1
 enum4linux -U 192.168.1.1
 ```
 
-#### **SNMP Enumeration**
+#### SNMP Enumeration
 ```bash
 # SNMP walk
 snmpwalk -v1 -c public 192.168.1.1
@@ -153,9 +147,9 @@ snmpwalk -v2c -c public 192.168.1.1
 onesixtyone -c /usr/share/wordlists/SecLists/Discovery/SNMP/common-snmp-community-strings.txt 192.168.1.1
 ```
 
-### **Web Application Enumeration**
+### Web Application Enumeration
 
-#### **Common Vulnerabilities**
+#### Common Vulnerabilities
 ```bash
 # SQL injection testing
 sqlmap -u "http://example.com/page?id=1"
@@ -168,7 +162,7 @@ sqlmap -u "http://example.com/page?id=1"
 # Test: ?page=../../../../etc/passwd
 ```
 
-#### **API Discovery**
+#### API Discovery
 ```bash
 # Common API endpoints
 curl -X GET http://example.com/api/
@@ -179,13 +173,11 @@ curl -X GET http://example.com/rest/
 # Check: /api/docs, /swagger, /openapi.json
 ```
 
----
+## Advanced Techniques
 
-## 🔍 Advanced Techniques
+### Cloud Infrastructure
 
-### **Cloud Infrastructure**
-
-#### **AWS Reconnaissance**
+#### AWS Reconnaissance
 ```bash
 # AWS CLI enumeration
 aws sts get-caller-identity
@@ -198,7 +190,7 @@ aws s3 ls s3://bucket-name/
 aws s3 cp s3://bucket-name/file.txt ./
 ```
 
-#### **Azure Reconnaissance**
+#### Azure Reconnaissance
 ```bash
 # Azure CLI enumeration
 az account show
@@ -207,7 +199,7 @@ az storage account list
 az webapp list
 ```
 
-### **Container & Kubernetes**
+### Container & Kubernetes
 ```bash
 # Docker enumeration
 docker ps
@@ -221,7 +213,7 @@ kubectl get secrets
 kubectl get configmaps
 ```
 
-### **IoT & Embedded Systems**
+### IoT & Embedded Systems
 ```bash
 # Device discovery
 nmap -sU -p 161 192.168.1.0/24              # SNMP devices
@@ -233,13 +225,11 @@ nmap -p 5683 192.168.1.0/24                 # CoAP devices
 binwalk firmware.bin
 ```
 
----
+## Custom Scripts & Automation
 
-## 🛠️ Custom Scripts & Automation
+### Bash Recon Scripts
 
-### **Bash Recon Scripts**
-
-#### **Quick Network Recon**
+#### Quick Network Recon
 ```bash
 #!/bin/bash
 # quick_recon.sh
@@ -263,7 +253,7 @@ if curl -s http://$TARGET > /dev/null; then
 fi
 ```
 
-#### **Subdomain Enumeration**
+#### Subdomain Enumeration
 ```bash
 #!/bin/bash
 # subdomain_enum.sh
@@ -289,9 +279,9 @@ cat $DOMAIN/*.txt | sort -u > $DOMAIN/all_subdomains.txt
 echo "Found $(wc -l < $DOMAIN/all_subdomains.txt) unique subdomains"
 ```
 
-### **Python Recon Scripts**
+### Python Recon Scripts
 
-#### **Port Scanner**
+#### Port Scanner
 ```python
 #!/usr/bin/env python3
 import socket
@@ -322,7 +312,7 @@ if __name__ == "__main__":
     port_scanner(target)
 ```
 
-#### **Subdomain Brute Forcer**
+#### Subdomain Brute Forcer
 ```python
 #!/usr/bin/env python3
 import requests
@@ -359,13 +349,11 @@ if __name__ == "__main__":
     subdomain_brute(domain, wordlist)
 ```
 
----
+## Output & Documentation
 
-## 📊 Output & Documentation
+### Report Templates
 
-### **Report Templates**
-
-#### **Basic Recon Report**
+#### Basic Recon Report
 ```markdown
 # Reconnaissance Report - [TARGET]
 
@@ -399,7 +387,7 @@ Brief overview of findings
 - [SCREENSHOTS]
 ```
 
-### **Data Organization**
+### Data Organization
 ```bash
 # Create organized directory structure
 mkdir -p recon/{nmap,web,services,outputs}
@@ -407,18 +395,16 @@ mkdir -p recon/web/{dirs,subdomains,technologies}
 mkdir -p recon/services/{smb,ftp,ssh,http}
 ```
 
----
+## Legal & Ethical Considerations
 
-## 🚨 Legal & Ethical Considerations
-
-### **Authorization Checklist**
+### Authorization Checklist
 - [ ] Written permission obtained
 - [ ] Scope clearly defined
 - [ ] Time constraints established
 - [ ] Contact information exchanged
 - [ ] Legal requirements reviewed
 
-### **Responsible Disclosure**
+### Responsible Disclosure
 ```bash
 # Document everything
 # Respect rate limits
@@ -426,11 +412,9 @@ mkdir -p recon/services/{smb,ftp,ssh,http}
 # Report findings responsibly
 ```
 
----
+## Advanced Reconnaissance
 
-## 🔮 Advanced Reconnaissance
-
-### **Social Engineering Recon**
+### Social Engineering Recon
 ```bash
 # LinkedIn research
 # Company employee information
@@ -438,7 +422,7 @@ mkdir -p recon/services/{smb,ftp,ssh,http}
 # Organizational structure mapping
 ```
 
-### **Physical Reconnaissance**
+### Physical Reconnaissance
 ```bash
 # Site surveys
 # Dumpster diving (if authorized)
@@ -446,7 +430,7 @@ mkdir -p recon/services/{smb,ftp,ssh,http}
 # Physical access testing
 ```
 
-### **Wireless Reconnaissance**
+### Wireless Reconnaissance
 ```bash
 # WiFi scanning
 airmon-ng start wlan0
@@ -457,11 +441,9 @@ hcitool scan
 bluetoothctl scan on
 ```
 
----
+## Quick Reference
 
-## 📚 Quick Reference
-
-### **Common Ports**
+### Common Ports
 ```bash
 # Web
 80, 443, 8080, 8443
@@ -476,7 +458,7 @@ bluetoothctl scan on
 22, 23, 3389, 5900
 ```
 
-### **Useful Wordlists**
+### Useful Wordlists
 ```bash
 # Common wordlists
 /usr/share/wordlists/dirb/common.txt
@@ -485,7 +467,7 @@ bluetoothctl scan on
 /usr/share/wordlists/SecLists/Usernames/top-usernames-shortlist.txt
 ```
 
-### **Essential Tools**
+### Essential Tools
 ```bash
 # Network
 nmap, masscan, netcat, wireshark
@@ -500,9 +482,7 @@ theHarvester, subfinder, amass, maltego
 custom scripts, automation frameworks
 ```
 
----
-
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to expand this reconnaissance cheatsheet! Please:
 
@@ -512,17 +492,13 @@ We welcome contributions to expand this reconnaissance cheatsheet! Please:
 - **Contribute learning resources**
 - **Report broken links** or outdated information
 
----
-
-## 📞 Get Involved
+## Get Involved
 
 - **GitHub Discussions**: [RedTeam Discussions](https://github.com/n3tl0kr/RedTeam/discussions)
 - **Security Community**: Join reconnaissance and OSINT groups
 - **Bug Bounty Programs**: Practice on authorized platforms
 - **CTF Competitions**: Participate in capture the flag events
 
----
-
 <div align="center">
-  <sub>🔍 *"Reconnaissance is the foundation of every successful operation"* 🔍</sub>
+  <sub>Reconnaissance is the foundation of every successful operation</sub>
 </div>
